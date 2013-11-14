@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Boring" content="">
+    <meta name="Ciera Martinez" content="">
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+    <title>  Become a superhero, handle your data with R |  CReporter </title>
+
+    <!-- CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+	body {margin-top: 90px;} /*This is the margin from the navigation to the next object.*/
+	</style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">About</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/blog">Reporting</a></li>
+            <li><a href="/research">Research</a></li>
+            <li><a href="https://twitter.com/CieraReports"><img src="/img/twitter.png" width="27" height="27"></a></li>
+              
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="col-md-2"></div>
+
+<div class="col-md-8">
+
+	<img src="/img/rcourse2.png" class="img-responsive" alt=""> 
+
+	<h1 class= "content" > Become a superhero, handle your data with R</h1>
+
+	<!-- ## Large Outline
+
+I   R and Programming Basics
+
+*   The Working Directory
+*   The Source File
+*   R as a Calculator
+*   Content
+    *   Objects and Functions
+    *   Data
+        *   Data Structure
+        *   Importing Data
+    * Handling Data
+        *   Get a feel for your dataset
+        *   Handling Data frames by Indexing: How to be picky
+            *   Specifying Rows and Columns
+            *   Sub-setting
+            
+II Visualization
+
+*   Basic Visualization 
+*   Visualization with ggplot2
+    *   Introduction
+        *   Open Source
+        *   R Packages
+    *   ggplot2
+        *   Visualization with qplot()
+        *   Combining Sub-setting with Visualization
+        *   Visualization with ggplot()
+
+III Basic Statistics
+    
+*   T-test
+*   ANOVA
+*   Combining Basic Statistics and Visualization
+
+    
+IV Resources -->
+
+
+<h2>Introduction</h2>
+
+<h3>Programming</h3>
+
+<p>As a visual learner, at first I was turned off to programming because it took away the graphical interfaces in software programs I was accustomed to interacting with.  The <a href="http://en.wikipedia.org/wiki/Graphical_user_interface">graphical user interface (GUI)</a> is the portion of a program that contains the buttons you push, the bars you scroll, the windows you type in, etc.  Basically a GUI is the visual component connecting you to the program.  When you first start to learn programming, you lose the visual crutch of your computing environment almost completely and must learn new ways to interact. Your tactile interaction with the GUI is replaced with plain text in the form of the programming language.  You may lose your "sight", but every time you feel and bump around you gain a clearer and clearer understanding of this new environment.</p>
+
+<p><img src="/img/daredevil1.jpg" class="img-responsive" align="right"></p>
+
+<p>Hey, did you see that horrible superhero movie Daredevil? You know, the one with Ben Affleck?  Either did I, but I do know a little of the back story of the Marvel Comic superhero Daredevil.  It is the story of a man who loses his sight (funny enough, by trying to save a blind man) when a radioactive substance spills onto him.  Although he loses his sight, his other senses become heightened and as a result he attains super human powers. This is a great analogy to a someone beginning to switch from GUI environments, like excel, to a new programing environment, like R. Just like Daredevil's first day as a superhero, after losing your "sight" you will touch, feel, and of course bump into things.  Actually, many of the most basic of programming commands are just simple things you type to gain an understanding of your environment. Every object in R can be defined in countless ways that are not possible to understand from a simple visual representation offered by a GUI.   Daredevil lost his sight, but gained the power of echo location, gaining an insight into his surroundings not capable from sight alone.  Eventually you stop grasping around you and begin to learn more advanced concepts and just glide through to exactly where you want to be. Programming will allow you to stop spending endless amounts of time searching for the correct button for the tool you want to use, instead, you literally just tell the program what you want done. You can even make tools there aren't even buttons for.  Hell, you can make tools that the world has never seen. The question is will you use your super powers for good or evil?</p>
+
+<h2>This Tutorial</h2>
+
+<p>There is only one way to truly learn programming and that is to spend <a href="http://norvig.com/21-days.html">a lot of time programming</a>. This is not meant to scare you aware from programming, but to free you from being so hard on yourself during frustrating time.  No one learns how to program properly fast.  Therefore, you will not learn how to program or master R in this tutorial.  What you will gain is an understanding of the power of programming and a glimpse of what is possible when using R for data manipulation, visualization, and analysis using R.</p>
+
+<p>I learned R as a requirement for my PhD studies to handle data.  I began to realize the power of programming and most importantly, how incredibly fun the learning process is.  From slowly learning other languages I began to realize that there are fundamental concepts that are repeated throughout programming that I wish I had known when starting to learn R. Often times, teaching guides to programming omit very basic details because most programmers think of them as second nature.  In this tutorial I try to make the material as transparent as possible, often going a bit more into detail on concepts/directions many times omitted in other tutorials.  I have included them because either I, or someone who I have taught, needed the extra details to understand what is going on.</p>
+
+<p>This tutorial is meant for individuals interested in learning the basics of R for simple statistics and data visualization.  I have been teaching R to undergraduate students and high schoolers interested in a career in biological science, but almost of all of the material requires no knowledge of biology.  The overall goal is to get scientists to move from Excel to R, so whenever possible I make comparison to how R and Excel are the same and different.  This tutorial is written under the assumption that the reader has little to no programming experience, therefore many beginning coding concepts are also introduced.  Much of the material can be applied to R run through any interface, but this tutorial is written for use with the standard R installation.</p>
+
+<h3>Some basic tips when learning programming:</h3>
+
+<ol>
+<li><strong>Type everything.</strong> I know you can just copy and paste from the tutorial, but do yourself a favor and type it out. You will start learning the subtleties of the syntax and get used to typing in new ways.</li>
+<li><strong>Break everything and make mistakes.</strong> When you run code that gives you the results you want, don't stop there.  Change the wording, change the symbols, try different combinations.  You reinforce what is correct by understanding what is wrong and of course how to fix mistakes.  Fixing mistakes is the fastest most effective way of learning programming (actually this is true when learning anything).</li>
+<li><strong>Teach others.</strong> One way to make sure you understand a concept is to explain it to someone else.</li>
+</ol>
+
+
+<h3>Sections</h3>
+
+<p>1  <a href="#section1">R and Programming Basics</a></p>
+
+<p>2 <a href="#section2">Visualization</a></p>
+
+<p>3 <a href="#section3">Basic Statistics</a></p>
+
+<p>4 <a href="#section3">Basic Statistics</a></p>
+
+<h2>R and Programming Basics <a name="section1"></a></h2>
+
+<h3>First Steps to Get Started</h3>
+
+<p>Before you get started with this tutorial download R and install the <a href="http://www.r-project.org/">standard download of R</a>.  If you already have R, but haven't used the program in awhile, it is a good idea to check for recent updates of the program. You can do this by using the drop-down menu R > Check For R Updates.  Maybe you were given the suggestion to use R studio, which is a great way to start using R, but this tutorial is written for the standard download version.  Most of what is taught should be applicable with R studio though, some code that is introduced may even have a button in R Studio, but it is up to you to find it.*</p>
+
+<p>Download this folder, which contains the datasets and beginning sourceFile.</p>
+
+<p><a href="/downloads/workingDirectory.zip" target="_blank">Files to download</a></p>
+
+<h3>The Working Directory</h3>
+
+<p>When you start R, the R Console window should appear. This is where all the operations can be run directly.   The last line will begin with the <code>&gt;</code> prompt icon. This is where you can start interacting with the R environment (see image below).</p>
+
+<p>Let us continue with the analogy that we are recently blinded.  The first instinct is to grasp around you and figure out where you are.  Many computing processes must all take place in the same directory (folder); your <a href="http://en.wikipedia.org/wiki/Working_directory">working directory</a>. Let's ask R where our working directory is by typing <code>getwd()</code>.  This returns a path to where R thinks our working directory is.  You have just begun to learn about your environment, but unfortunately this is not where you want to be.  You want your working directory to be in the "R_Tutorial" folder that contains everything you need for this tutorial.</p>
+
+<p><strong>There are two easy ways to set the working directory using the standard R installation.</strong></p>
+
+<ol>
+<li>If you are familiar with how paths work, you can enter use the <code>setwd()</code> function and enter your path in quotations after the parenthesis.</li>
+</ol>
+
+
+<pre><code class=">">setwd("path/to/yourworkingdirectory/R_Tutorial")
+</code></pre>
+
+<pre><code>Error: cannot change working directory
+</code></pre>
+
+<ol>
+<li>You can set your working directory using the Misc dropdown menu on the top navigation bar and choose Change Working Directory. This will prompt a window where you can manually choose the R_Tutorial folder.</li>
+</ol>
+
+
+<p>Are we in the correct location? Check once again if we are in the correct working directory using <code>getwd()</code>. <strong>This is something you will need to do every single time you start using R</strong>.  This is a common source for many beginning errors you may encounter.  So always check and re-check your working directory is in the folder that contains your data and source files.</p>
+
+<p><img src="/img/screenShot2.png" class="img-responsive" alt="Responsive image"></p>
+
+<h3>The Source File</h3>
+
+<p>You can type everything  into the console directly, but since you want to keep a history of what you are doing, it is best practice to write into a <a href="http://en.wikipedia.org/wiki/Source_code"><strong>source file</strong></a>. Your source file is just a text file that holds the history of your coding and notes. In the future you can come back to it to re-run the entire file or in this case, to help you remember what you have done each day as you run the tutorial. Source files end in the extension .R.  You can start a new source file under the Drop-down menu File -> New Document.  Or you can open existing source files by choosing Open Document.  Go ahead and open the sourceFile.R file. You will see some notes that begin with a <code>#</code> hash symbol, which uncomments the code.  You must always proceed notes/comments that you don't want R, as a program, to run with <code>#</code>. While taking advantage of <code>#</code>, it is important to record notes on what works and more importantly what doesn't work and make notes on why it didn't work, especially while learning.</p>
+
+<h3>R as a calculator</h3>
+
+<p>R in its simplest form can act as a powerful calculator.  In your source file, <code>2 + 2</code> will be written, place your cursor on the line in the source window where <code>2 + 2</code> is written and hit run by using a keyboard shortcut: 1. mac user's shortcut <code>⌘ + enter</code> 2.  PC user's shortcut <code>ctrl + r</code>.  This sends the code down below to the console where it is run.</p>
+
+<p><img src="/img/screenShot1.png" class="img-responsive" alt="Responsive image"></p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><pre><code>Try typing in some basic calculations. 
+</code></pre></li>
+</ol>
+
+
+<pre><code class=">">2 + 2
+</code></pre>
+
+<pre><code class=">">2 + 3
+</code></pre>
+
+<ol>
+<li>Try typing in some more complex calculations.</li>
+</ol>
+
+
+<pre><code class=">">(2 + 3) * (4 + 5)
+</code></pre>
+
+<ol>
+<li>Try to type a calculation that includes addition, subtraction, multiplication, and division.</li>
+</ol>
+
+
+<hr />
+
+<p><img src="/img/daredevil3.png" class="img-responsive" align="right"></p>
+
+<h2>Content</h2>
+
+<p>Now that you have a basic idea of the enviroment you are in, it is time to start to understand the objects in this enviroment, the data. You will learn to touch and manipulate the data, which will help you start revealing patterns that exsist within the data you touch.</p>
+
+<p>One main feature of programming languages is that you can assign an object to represent a value. In R, this is done using <code>&lt;-</code> which is called the "assignment operator", but most people commonly refer to it as "the arrow". Type all of these into your source file.  Make notes on what is going on in plain english.</p>
+
+<pre><code class=">">x &lt;- 2
+</code></pre>
+
+<pre><code class=">">y &lt;- 3
+</code></pre>
+
+<pre><code class=">">x + x
+</code></pre>
+
+<pre><code class=">">x * y
+</code></pre>
+
+<p>You can use letters, digits, and periods, alone or in combination as an object name, <em>but never with spaces</em>. Naming objects can cause problems in certain circumstances. Some text is used for specific purposes in R, for instance T and F are the standard abbreviation for TRUE and FALSE.  Many times this won't affect your scripts, but it is something to keep in mind. <a href="http://www.dummies.com/how-to/content/how-to-successfully-follow-naming-conventions-in-r.html">Here is a simple article going into a bit more detail</a>.</p>
+
+<p>You can even use the arrow to name the results of code.</p>
+
+<pre><code class=">">xplusx &lt;- x + x
+</code></pre>
+
+<pre><code class=">">xplusx * y
+</code></pre>
+
+<p>Always try to name objects with a name that is unique and descriptive.  This will make your life easier when you come back to the source file and most importantly your code clearer for other people who read your script.</p>
+
+<p>Much of programming is composed of the interaction of functions and objects (also called arguments).  You can think of a function as an activity and the object is what you act upon.  Functions are defined in the R program.  For instance the <code>sum()</code> function. I bet you can predict what <code>sum()</code> does.</p>
+
+<pre><code class=">">sum(x, y, x, x)
+</code></pre>
+
+<p>R contains many built in functions and it may take sometime to become familiar with what functions are available.  One thing to keep in mind if you are coming from Excel, is that if there is a button for it in Excel, there is a function for it in R that is equivalent. Since you are now blind and cannot see all the awesome options R has in front of you, just ask for help.</p>
+
+<p><strong>There are two main ways to ask for help</strong></p>
+
+<ol>
+<li><p>Google it. Since R was made in open source there is a giant community that is out there to help you, <strong>use it</strong>.</p></li>
+<li><p>Using the help option.  You can just type <code>?</code> in front of any function to learn about it.  <code>?sum()</code>.  Many times the help files are a bit complex, but as you read more and more, you understand them more and more.  To start try reading the description of <code>sum()</code>. There is usually an Examples section at the end of these help files that can be very helpful even for beginners.</p></li>
+</ol>
+
+
+<h3>Data</h3>
+
+<p>Data can come in many different structures, but they all must follow rules to be used by R efficiently and effectively.  The first hurdle when dealing with data is understanding data organization and structure.  This is an incredibly dense topic as data is often structured to serve specific purposes. If you are a researcher who is generating data, plan your data structure <em>before</em> you start collecting data, spend some time thinking about how you want to approach your analysis in the future.  A large portion of big data analysis is spent on restructuring and clarification of inconsistencies found in datasets. I cannot repeat this enough, <strong>a large portion of big data analysis is spent on cleaning up data</strong>. The great part is that setting up your data becomes intuitive quickly the more you work with data in R.  We will only briefly discuss data structures in this tutorial, but keep in mind that an understanding of data structuring makes a huge difference in understanding how R works and further how to get as much out of your data as possible.  See the resources section to learn more about data structures.</p>
+
+<h3>Vectors</h3>
+
+<p>The most basic data structure in R is a vector, which is simply a list of numbers.</p>
+
+<p>One way to make a vector is using the <code>c()</code> function.</p>
+
+<pre><code class=">">weight &lt;- c(60, 72, 57, 90, 95, 72)
+</code></pre>
+
+<pre><code class=">">height &lt;- c(1.75, 1.8, 1.65, 1.9, 1.74, 1.91)
+</code></pre>
+
+<p>What is this  <code>c()</code> function?  One of the keys to learning programming is to be curious about <strong>everything</strong>.</p>
+
+<p><strong>Every time you are presented with code that is unfamiliar to you</strong></p>
+
+<ol>
+<li>Ask: Do I understand every detail of the code?</li>
+<li>Try to translate the code to plain English.</li>
+<li>Play with it. Delete things, add things, and rearrange.  Don't be afraid, try it, it's fun.</li>
+</ol>
+
+
+<p>So what did we just do? What do you think  <code>c()</code> does? To get a better idea let's call the variables, which are now vector objects called height and weight.</p>
+
+<pre><code class=">">height
+</code></pre>
+
+<pre><code>[1] 1.75 1.80 1.65 1.90 1.74 1.91
+</code></pre>
+
+<pre><code class=">">weight
+</code></pre>
+
+<pre><code>[1] 60 72 57 90 95 72
+</code></pre>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><p>Describe in plain English what <code>c()</code> does.</p></li>
+<li><p>Compare your answer to the <code>c()</code> help file, which can be called with <code>?c()</code>.</p></li>
+<li><p>Make a comment in your code explaining to yourself using a "hash tag" <code>#</code>. Don't forget, anytime you
+precede text with <code>#</code>, it is not read into your code.</p></li>
+<li><p>Make a vector called "myFamily" that lists all the ages in your immediate family.</p></li>
+</ol>
+
+
+<hr />
+
+<p>Let's get back to the first of our datasets the vectors <code>height</code> and <code>weight</code>. We can do more complex calculations with these.</p>
+
+<pre><code class=">">bmi &lt;- weight/height
+</code></pre>
+
+<p>When you divide weight by height you get the <a href="http://en.wikipedia.org/wiki/Body_mass_index">Body Mass Index (BMI)</a>.  Let's take a quick look at the distribution of <code>bmi</code>.</p>
+
+<pre><code class=">">plot(bmi)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-16.png" alt="" /></p>
+
+<p>The plot function is a simple way to quickly visualize simple plotting.</p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><p>Write a function to get the average age of people in your <code>myFamily</code> dataset.  Oh I didn't tell you what the average function is? Looks like you have to google it.</p></li>
+<li><p>Make a plot that has <code>weight</code> on the x-axis and <code>height</code> on the y-axis using the <code>plot()</code>.</p></li>
+</ol>
+
+
+<hr />
+
+<p>In my opinion, the best part about using R is visualizing data.  I know, I know, this plot is not impressive and you certainly can make a more beautiful plots in Excel.  This is just the simplest way to visualize your data. I will spend a lot more time explaining how powerful R is as a tool to visualize data later, don't worry.</p>
+
+<h3>Importing Data</h3>
+
+<p>We just went through how you make a simple vector data set directly in R, but most people import their data from other sources. Some people just export their data from other database programs, like Excel for example. The Excel default file extension is .xlsx.  These types of files allow you to color code your data, make multiple sheets on one data file, and apply functions within cells.  Don't get me wrong, these tools are fun if your intention is to organize and analyze <em>small</em> data sets and have no plans to share your analysis. If you must use .xlsx files for your data, it is good practice to also have an updated version of the data file in plain text, so you can share it.  Most bioinformaticians, statisticians, and all other data crazed people, will expect a datafile in plain text.</p>
+
+<p>This comes to a very important lesson in programming: <strong>Use <a href="http://en.wikipedia.org/wiki/Plain_text">plain text</a></strong>. Plain text is essentially what is sounds like, a simple interchangeable way to view text.</p>
+
+<p><strong>Using plain text allows</strong></p>
+
+<ol>
+<li><p><strong>Portability</strong>: You can open a plain text file in any operating system from mac to PC to iPhone to a computer from the 80s.  I expect that a computer in 25 years will still be able to open that plain text file. You can also open text files in pretty much <em>any</em> program.  Or open your data in R, Excel, textedit (mac), notepad (PC), ect., basically any program that reads text.</p></li>
+<li><p><strong>Easy to Create</strong>:  To create a plain text file you simple type into a blank file. That's it.</p></li>
+<li><p><strong>Light</strong>:  Since these files are only text, they are incredibly light, making them take up little hard drive space and open incredibly fast.</p></li>
+</ol>
+
+
+<p>The most common basic text file extensions that can be opened by R is .txt and .csv (comma delimited).  There are two identical data sets in your folder stereotypes.csv and stereotypes.xslx.</p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<p>First let us see how different these file types really are. Let's leave R to investigate further.</p>
+
+<ol>
+<li><p>Using either Textedit or Notepad, open stereotypes.xslx.</p></li>
+<li><p>Using either Text Edit or Notepad, open stereotypes.csv.</p></li>
+<li><p>What is the differences between these files?</p></li>
+</ol>
+
+
+<hr />
+
+<h4>Converting a .xlsx file to .csv</h4>
+
+<p>What happens when you only have a .xlsx file and you want to use in R?  You have to first open the .xlsx file in Excel and re-save this file so R can read it. In Excel,  File>Save As>, in the format drop down menu, comma separated values (.csv) or tab delimited text (.txt).  We will be working with .csv files in this tutorial.</p>
+
+<h4>Our data set: <a href="/downloads/stereotypes.csv" target="_blank">stereotypes.csv</a> in the workingDirectory folder you downloaded in the begining. Make sure this file is in your working directory.</h4>
+
+<p>A little about the dataset we are going to explore:  799 individuals were surveyed from ages 18 to 26 about their weekly their consumption habits.  They were further categorized based on their clothing and music choices and put into four stereotypes: Nerds, Hipsters, Metalheads, and hippies.  Consumption of coffee (per cup), computer usage (hourly), showers, beers(per 12oz), and tacos.  Oh yeah, and this dataset is fake.</p>
+
+<h4>Importing a .csv dataset in R</h4>
+
+<p>It is important that you set the working directory correctly to open your .csv dataset file.</p>
+
+<pre><code class=">">stereotypes &lt;- read.csv("stereotypes.csv")
+</code></pre>
+
+<p>You have turned everything in the file stereotypes.csv into the variable <code>stereotypes</code>.  If it was done correctly, you should see nothing. If you something did not go right you may have gotten an error.  The most common error is</p>
+
+<pre><code>cannot open file 'stereotypes.csv': No such file or directory
+</code></pre>
+
+<p>This is caused usually by two mistakes</p>
+
+<ol>
+<li>You typed the filename wrong.</li>
+<li>You are not in the correct working directory.  In order to open a file in R, it must be in your working directory.</li>
+</ol>
+
+
+<p>Make sure you get no errors.  Again, if you successfully imported the stereotypes.csv dataset you should see nothing.  Let's go back to the Daredevil analogy, you see nothing, but that does not mean it is not there.  The next step is to grasp around at your data to make sure it is there and then the exciting step is understanding and honing your newly acquired super powers to understand your data better then simply looking at it on a spreadsheet.</p>
+
+<h3>Handeling Data</h3>
+
+<h4>Get a feel for your dataset</h4>
+
+<p>Alright let's get to handling our data, first we want to touch it to make sure it is there. Remember, we have called our dataset "stereotypes" at the same time we were importing the dataset.</p>
+
+<pre><code class=">">stereotypes &lt;- read.csv("stereotypes.csv")
+</code></pre>
+
+<p>Just typing in the dataset name will output the full dataset.</p>
+
+<pre><code class=">">stereotypes
+</code></pre>
+
+<p>This can be a problem when you are working with large data sets though. So, another popular option is to use <code>head()</code>, which outputs the first 6 lines.</p>
+
+<pre><code class=">">head(stereotypes)
+</code></pre>
+
+<p>Additionally you can look at the last 6 lines with the tail function.</p>
+
+<pre><code class=">">tail(stereotypes)
+</code></pre>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<p>There are many other ways to get a feel for your data.  Here is a list of functions that can help you understand your data. Run the functions and look at the help files and write in your own words what these functions are doing.  If you have time, look at some of the options of these functions and try them.</p>
+
+<ol>
+<li><p><code>names(stereotypes)</code></p></li>
+<li><p><code>summary(stereotypes)</code></p></li>
+<li><p><code>str(stereotypes)</code></p></li>
+</ol>
+
+
+<hr />
+
+<h3>Handling Data frames by Indexing: How to be picky</h3>
+
+<p>Often when you are dealing with data you want to perform tasks on smaller more specific areas of your data as opposed to calling the entire dataset.  This is referred to as indexing. In a data frame, there are endless ways to specify a subset of the dataset.  You can call these subsets by columns, rows, numeric values, treatment groups, and all the way down to one specific observation (what would be equivalent to a "cell" in Excel.)  In Excel, we highlight exactly what we want, which can be easy, as in column specification, but when it comes to specifying more abstract parts of a dataset, things can get extremely frustrating fast.</p>
+
+<p>In order to find meaningful patterns in data, you begin to ask questions and make hypotheses. For instance,  you want to ask which population has the highest rate of females who binge on coffee, but hardly ever drink alcohol? The first step would be to isolate all observations of females who drink lots of coffee, but hardly drink alcohol, say more than 14 cups of coffee and less than 3 drinks a week.  Or what if you ask, is there a significant difference between male and female binge drinking patterns?  With this question you may want to exclude nerds from this analysis because they hardly drink. With every question you ask about your data, you need to subset your data for the statistical analysis.  This is when you start getting into trouble if you are using spreadsheets.  You begin copying and pasting, making multiple sheets on your spreadsheet, and color coding to keep your observations organized, thus breaking the rule of keeping your data in plain text. You will also start introducing all kinds of nasty human error.  Without a lengthy description of your organization, you exclude anyone else from understanding what the hell you did when analyzing your data (even yourself). In programming with R, your source code is EXACTLY what you did.  When you want to share, you just send your source code and data file, done.  Making your life easier and the scientific community more accessible and transparent, which is something that is seriously lacking in science and well, everywhere.</p>
+
+<h4>Specifying Rows and Columns</h4>
+
+<p>Individual columns can be selected based on column name: first comes the name of the data frame variable followed by a dollar sign and the name of the column for example if we want to look at just the coffee column:</p>
+
+<p><code>stereotypes$coffee</code></p>
+
+<p>or the population column:</p>
+
+<p><code>stereotypes$population</code></p>
+
+<p>Individual rows and columns can also be specified by column number or row number in the square brackets.</p>
+
+<p><code>[row, column]</code>.</p>
+
+<p>For instance, if you want to specify only column 1. You leave the row blank and specify column 1.</p>
+
+<p><code>stereotypes[ ,1]</code></p>
+
+<hr />
+
+<p> ##Activity break</p>
+
+<p> Using the square brackets:</p>
+
+<ol>
+<li>Specify the coffee column.</li>
+<li>Specify the 122 row of the coffee column.</li>
+<li>Specify rows 40 through 80 of the shower column. (Didn't go through this. Try finding the answer yourself. Take advantage of that sweet sweet open source community.)</li>
+</ol>
+
+
+<hr />
+
+<p>Now you can use a R function on a specific column.  Let's get the summary of the population column.</p>
+
+<p><code>summary(stereotypes$population)</code></p>
+
+<h4>Sub-setting</h4>
+
+<p>As mentioned earlier, we often times we ask questions about our data that requires manipulating the data by sub-setting particular observations. One option is to use the <code>subset()</code> function.</p>
+
+<p><strong>Question 1</strong>: Which population has the highest rate of females who binge on coffee, but hardly ever drink alcohol?</p>
+
+<p>So we need:</p>
+
+<ol>
+<li>only the females.</li>
+</ol>
+
+
+<pre><code class=">">females.only &lt;- subset(stereotypes, gender == "female")
+</code></pre>
+
+<p>Always double check you work. I cannot stress this enough.  You should have a dataset with only females.</p>
+
+<p><code>head(females.only)</code></p>
+
+<p>or you a more appropriate way to check your data is to ask "What are the different categories that exist in females.only$gender column"</p>
+
+<p><code>summary(females.only)</code></p>
+
+<p>Did it work?  If everything looks right let's further subset the data by females who drink less than 4 drinks a week and more than 20 cups of coffee.  You can use the <code>&amp;</code> symbol to include two conditions of the sub-setting.</p>
+
+<pre><code class=">">caffeine.females &lt;- subset(females.only, beer &lt; 3 &amp; coffee &gt; 2)
+</code></pre>
+
+<p>Let's check it out using <code>summary()</code>.  Just by looking at the data, can you make a hypothesis if a certain population of females has a high rate of coffee consumption, yet a low beer intake?</p>
+
+<p>You can also use <code>|</code> as an "or" condition.  Let's say you want to isolate everyone in two groups.</p>
+
+<pre><code class=">">nerds_and_hippies &lt;- subset(stereotypes, population == "nerd" | population == 
+    "hippie")
+</code></pre>
+
+<p>You can even subset and specify which columns you want to keep with the <code>select = c()</code> option. For instance:</p>
+
+<pre><code class=">">nerds_and_hippies.beeronly &lt;- subset(stereotypes, population == "nerd" | population == 
+    "hippie", select = c(gender, population, beer))
+</code></pre>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<p>There are many ways to subset data and you can get a <a href="http://www.cookbook-r.com/Basics/Getting_a_subset_of_a_data_structure/">brief look with clear examples here</a>.</p>
+
+<ol>
+<li><p>Subset the data to only nerds and metalheads.</p></li>
+<li><p>Use what you have learned and <a href="http://www.cookbook-r.com/Basics/Getting_a_subset_of_a_data_structure/">this page</a> as guidance for sub-setting a dataset to answer the question: Are there more males who binge drink (over 25 a week) and eat over 20 tacos a week in the metal heads or hipster population?</p></li>
+<li><p>Ask one more question about the dataset that you are interested in. Subset the data accordingly.</p></li>
+<li><p>In your own words explain what "==" means?</p></li>
+</ol>
+
+
+<hr />
+
+<h1>Visualization <a name="section2"></a></h1>
+
+<p>We now have an idea of how to navigate around our enviroment and how to handle the contents with in our enviroment.  Now that we are comfortable at being blind, we can start to understand and hone your super powers in understanding the patterns that exist in our data.</p>
+
+<p><img src="/img/daredevil2.png" class="img-responsive" alt="Responsive image"></p>
+
+<p>Visualization of data is becoming increasingly important in society.  Our ability to collect information is exceeding our ability to understand what the data is telling us.  This is especially pertinent in science, in every single field.  Since data sets are becoming increasingly large and complex, we need tools to help us understand patterns that may help us make sense of the data.  One of the best ways to observe patterns is to break the data into digestible smaller visual components. Video Break:  <a href="http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen.html">Stats that reshape your worldview.</a> Hans Rosling.</p>
+
+<h2>Basic Visualization</h2>
+
+<p>We saw earlier a very basic plotting function in R, <code>plot()</code>.</p>
+
+<pre><code class=">">plot(stereotypes$coffee)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-17.png" alt="" /></p>
+
+<p>There are a lot of simple functions to visualize your data built into the base installation of R.  For instance <code>`hist()</code>, which stands for histogram, commonly called a bar graph.</p>
+
+<pre><code class=">">hist(stereotypes$beer)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-18.png" alt="" /></p>
+
+<p>That’s the distribution for the whole population, but is there is a difference in beer consumption between the different populations? That can be studied using a box plot.  In this next example,  height is divided into two groups using the variable gender, and a separate box plot is produced for both of these plots:</p>
+
+<pre><code class=">">boxplot(stereotypes$beer ~ stereotypes$gender)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-19.png" alt="" /></p>
+
+<pre><code class=">">boxplot(stereotypes$beer ~ stereotypes$population)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-20.png" alt="" /></p>
+
+<p>You can think of the "tilda" symbol <code>~</code> in R to mean "by".  <code>boxplot(stereotypes$beer ~ stereotypes$gender)</code> translates to "Make a box plot of all the values in the beer column by population."</p>
+
+<h2>Visualization with ggplot2</h2>
+
+<h3>Introduction</h3>
+
+<h4>Open Source</h4>
+
+<p>So remember when I asked you if you wanted to use your superpowers for good or evil?  If programmers are super heroes, the truly dividing aspect between those who are good and those that are evil is using your powers with Open Source in mind. One of the best aspects of R is that R is open source. Three of the most important reasons open source is popular is that 1.) it is free to everyone 2.) anyone can help improve the program and 3.) fosters personal customization.  Don't be evil, always strive to code with collaboration and the open source philosophy in mind.</p>
+
+<h4>R Packages</h4>
+
+<p>Once you master an open source program you can begin to help improve it.  In R, you can add upon the base R functions by adding R <a href="http://www.statmethods.net/interface/packages.html">"packages"</a> you built yourself. A package is a collection of code and data that can be added to the R program.  The standard installation comes with base packages, but there are hundreds of others that have been created for endless amounts of analysis you may want to perform.   This is a concept that is repeated in many other languages, where <a href="http://en.wikipedia.org/wiki/Library_(computing">library</a>) basically means an extension of the program. In R, the directory where the packages are stored is called the library.  Sometimes people use these words interchangeably.</p>
+
+<h3>ggplot2</h3>
+
+<p><a href="http://had.co.nz/">Hadley Wickham</a> has really revolutionized the way in which we visualize data in R with the creation of the R package called <a href="http://ggplot2.org/">ggplot2</a>.  In order to use packages, you need to first install the package. You only need to do this the first time you use the package.  So for ggplot2, just type <code>install.packages("ggplot2")</code>.  After you have a library installed, in order to use the library,  you just call up the library <code>library(ggplot2)</code>.  You have to do this each time you start a new R session for whatever library you need to use. It is a good idea to put any packages you use a the top of your source file so you remember to run it right away.  Go ahead and put <code>library(ggplot2)</code> in the beginning of your source file.</p>
+
+<p>There are two ways to build visualizations with ggplot2</p>
+
+<ol>
+<li><code>qplot()</code> - simple and often quicker</li>
+<li><code>ggplot()</code> - regular, allows more control of the different layers you are adding to a plot and damn fine visual articulation.</li>
+</ol>
+
+
+<p>With <code>qplot()</code>, you put what you want on the y-axis, what you want on the x-axis, and specify which data set with <code>data =</code>. It works similar to the <code>plot()</code> function we have already explored.</p>
+
+<pre><code class=">">qplot(beer, tacos, data = stereotypes)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-21.png" alt="" /></p>
+
+<p>The default graph type is a point plot, but you can specify a wide range of <a href="http://docs.ggplot2.org/current/">different plots</a>, called "geoms". To specify a different type of graph, simply add <code>,geom = ""</code></p>
+
+<pre><code class=">">qplot(beer, data = stereotypes, geom = "histogram")
+</code></pre>
+
+<pre><code>stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust
+this.
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-22.png" alt="" /></p>
+
+<p>Did you see the message after you ran the script?</p>
+
+<p><code>stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.</code></p>
+
+<p>Make sure you read the output after you run the all code.  Many times messages are built into programs to warn you of possible problems, even though the script has run successfully. In this case, this message is highlighting a way to manipulate the output that could potentially skew how you interpret the data. Let's check it out.</p>
+
+<pre><code class=">">qplot(beer, data = stereotypes, geom = "histogram", binwidth = 1)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-23.png" alt="" /></p>
+
+<p>You could see how the interpretation of the graph would change dramatically if the bin width was higher.</p>
+
+<pre><code class=">">qplot(beer, data = stereotypes, geom = "histogram", binwidth = 20)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-24.png" alt="" /></p>
+
+<p>Those last plots were telling us how many observations have a particular amount of weekly beer consumption. We can see that most of the people surveyed drink under 20 beers a week. Now we want to quickly ask, does each group have similar observation distributions?</p>
+
+<pre><code class=">">qplot(beer, data = stereotypes, geom = "histogram", fill = population)
+</code></pre>
+
+<pre><code>stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust
+this.
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-25.png" alt="" /></p>
+
+<p>or another way to look at it,</p>
+
+<pre><code class=">">qplot(beer, data = stereotypes, geom = "density", fill = population)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-26.png" alt="" /></p>
+
+<p>This graph is nice, but we can't see all the distributions clearly.  Let's change the alpha, which is the transparency option.</p>
+
+<pre><code class=">">qplot(beer, data = stereotypes, geom = "density", alpha = I(0.5), fill = population)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-27.png" alt="" /></p>
+
+<p>Try alpha without the <code>I()</code> aesthetic. What do you think it does?  <code>I()</code> sets an aesthetic to a constant that is defined in the plot. This is setting, as opposed to mapping.</p>
+
+<p><strong>Setting</strong> Allows you to set to a constant within the graph.</p>
+
+<p><strong>Mapping</strong> Mapping is as if you are mapping a new variable.  If you are creating a new variable,  you get a new reference in the side legend.</p>
+
+<p>This is one of those options that, although simple, saves you some frustration when trying to control your legend early in using gglplot2. In the future, when you become more advanced, the concept begins to allow great flexibility in controlling many informative layers of your visualization that make up more complex visual constructions.</p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<p>There are many different geoms in ggplot2.  You can go to the <a href="http://docs.ggplot2.org/current/">ggplot documentation page</a> for guidance in this section.</p>
+
+<ol>
+<li><p>View the distribution of showers and color by population.</p></li>
+<li><p>View the distribution of beer consumption and color by gender.</p></li>
+<li><p>Find a way to create a plot using the the geom violin with the <code>stereotype</code> data set.</p></li>
+</ol>
+
+
+<hr />
+
+<h3>Combining Subset with Visualization</h3>
+
+<p>When you combine the power of subset with visualization you begin to see the real power of R to visualize your data.  Let's say we wanted to see if there is a difference between gender and taco consumption of a particular group.</p>
+
+<p>First we need to isolate only one group.  Let's look at metalheads first.</p>
+
+<pre><code class=">">metalheads &lt;- subset(stereotypes, population == "metalhead")
+</code></pre>
+
+<p>Make sure you check to see if it works, by using one of the functions we explored earlier. Then continue with your new sub-setted data set, <code>metalheads</code>.</p>
+
+<pre><code class=">">qplot(tacos, data = metalheads, geom = "density", fill = gender)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-29.png" alt="" /></p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><p>Make a graph that visually describes the difference between beer consumption between gender in the nerd category.</p></li>
+<li><p>Using the<a href="http://docs.ggplot2.org/current/">ggplot2 documentation</a>, explore three different geoms, using either the full data set or a subset of the data. Tell me something interesting about the data.</p></li>
+<li><p>From your exploration of the <code>stereotypes</code> data make three hypotheses about the data.</p></li>
+</ol>
+
+
+<hr />
+
+<h3>Visualization with the <code>ggplot()</code> function</h3>
+
+<p><code>qplot()</code> is a great introduction to the power of R, but only allows one dataset and one set of aesthetic mappings. With <code>ggplot()</code> you are capable of building a plot based on layers, controlling each layer independently. So exciting.</p>
+
+<p>The first thing to notice is that the syntax of <code>ggplot()</code> is different from <code>qplot()</code>.</p>
+
+<pre><code class=">">ggplot(stereotypes, aes(shower, fill = gender)) + geom_bar()
+</code></pre>
+
+<pre><code>stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust
+this.
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-30.png" alt="" /></p>
+
+<p><code>aes()</code> is the section where we set the mapping aesthetics for the data. The base of this plot is where you call the data, but does not contain any layers yet. We can fit this base into one variable so we don't have to think about it anymore.</p>
+
+<pre><code class=">">p &lt;- ggplot(stereotypes, aes(shower, fill = gender))
+</code></pre>
+
+<p>When you run <code>p</code> nothing will appear because you do not have any layers, which is the visual output. At a minimum there must be one layer, the geom. Layers are added with a plus sign.</p>
+
+<pre><code class=">">p + geom_bar()
+</code></pre>
+
+<pre><code>stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust
+this.
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-32.png" alt="" /></p>
+
+<p>With each layer you add, you can manipulate the aesthetics separately.  Let's change a few of the geom_bar() aesthetics.</p>
+
+<pre><code class=">">p + geom_histogram(binwidth = 1, position = "dodge")
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-33.png" alt="" /></p>
+
+<p>You can continue to add as many layers you want with fine control over each layer.</p>
+
+<pre><code class=">">p + geom_histogram(binwidth = 1, position = "dodge") + coord_flip()
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-34.png" alt="" /></p>
+
+<p>Another really informative way to view your information in your data is to view multiple graphs in one plot.</p>
+
+<pre><code class=">">p + geom_histogram(binwidth = 5, position = "dodge") + facet_grid(~population)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-35.png" alt="" /></p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><p>With the <code>p</code> base layer, make a unique plot by adding additional layers.</p></li>
+<li><p>Make new base layer.  Explore what the difference is between <code>color =</code> and <code>fill =</code>.  Use your own words to discern the difference.</p></li>
+</ol>
+
+
+<hr />
+
+<p>Of course color is an option that can be adjusted many different ways. There are many ways to control the color aesthetic in your plots.</p>
+
+<pre><code class=">">ggplot(stereotypes, aes(beer, tacos, color = population)) + geom_point() + scale_colour_brewer("clarity")
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-36.png" alt="" /></p>
+
+<p>or you can specify points based on symbol.</p>
+
+<pre><code class=">">ggplot(stereotypes, aes(beer, tacos, color = population, shape = gender)) + 
+    geom_point()
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-37.png" alt="" /></p>
+
+<p>Looks like we learned that beer and taco consumption are slightly correlated, but do we truly know if tacos lead to beer or beer leads to tacos? One of life's great mysteries.</p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li>Read about and use the following modifiers correctly with the any portion of the <code>sterotypes</code> dataset you want.</li>
+</ol>
+
+
+<p>Modify color with <a href="http://docs.ggplot2.org/current/scale_hue.html"><code>scale_color_hue()</code></a></p>
+
+<p>Modify the text on the plot with <a href="http://docs.ggplot2.org/current/element_text.html"><code>element_text    ()</code></a></p>
+
+<ol>
+<li>Make a tricked out box plot using the <code>stereotypes</code> data.  Use at least 3 of the aesthetic options available for geom_boxplot.  Use <a href="http://docs.ggplot2.org/current/geom_boxplot.html"><code>ggplot2</code> boxplot documentation</a> for guidance.</li>
+</ol>
+
+
+<hr />
+
+<h1>Basic Statistics</h1>
+
+<p>We saw that there are many ways to view our data to try to get an feel for what sort of trends might be occurring, but in order to make some declarative statements about the data, we must do some statistical analysis.</p>
+
+<h5>Example 1- T-test for Internode Data</h5>
+
+<p><em>data file = stereotypes.csv</em></p>
+
+<ol>
+<li>Read in your data.</li>
+<li>Look at your data</li>
+<li>Ask a question</li>
+<li>Prepare Data</li>
+<li>Perform Analysis</li>
+</ol>
+
+
+<pre><code class=">">stereotypes &lt;- read.csv(file = "stereotypes.csv")
+</code></pre>
+
+<p>Let's start by looking at the data.</p>
+
+<pre><code class=">">head(stereotypes)
+</code></pre>
+
+<pre><code class=">">summary(stereotypes)
+</code></pre>
+
+<p><strong>QUESTION</strong> Are there differences between drink consumption (coffee and beer) between males and females from the metalhead population?</p>
+
+<h5>Preparation of Data : Sub-setting and Adding Columns</h5>
+
+<p>First we need to isolate only the data we need.  The <code>select = c()</code> at the end lets us choose only the columns we need.  Alternatively, you could use <code>select = -c()</code> to choose the columns you don't want to include.  Of course, without using subset you get all of the columns.</p>
+
+<pre><code class=">">metalheaddrinks &lt;- subset(stereotypes, population == "metalhead", select = c(population, 
+    gender, coffee, beer))
+</code></pre>
+
+<p>Always check your data.</p>
+
+<pre><code class=">">summary(metalheaddrinks)
+</code></pre>
+
+<pre><code class=">">names(metalheaddrinks)
+</code></pre>
+
+<p>Now we want to add another column that is the sum of both coffee and beer.</p>
+
+<pre><code class=">">metalheaddrinks &lt;- cbind(metalheaddrinks, (metalheaddrinks$coffee + metalheaddrinks$beer))
+</code></pre>
+
+<p>You can see with the <code>names()</code> function the addition of the new column.</p>
+
+<pre><code class=">">names(metalheaddrinks)
+</code></pre>
+
+<pre><code>[1] "population"                                     
+[2] "gender"                                         
+[3] "coffee"                                         
+[4] "beer"                                           
+[5] "(metalheaddrinks$coffee + metalheaddrinks$beer)"
+</code></pre>
+
+<p>Do you see the default column name that was given to our new column.  Pretty ugly. Let's change it!</p>
+
+<pre><code class=">">colnames(metalheaddrinks) &lt;- c("population", "gender", "coffee", "beer", "sum")
+</code></pre>
+
+<pre><code class=">">names(metalheaddrinks)
+</code></pre>
+
+<pre><code>[1] "population" "gender"     "coffee"     "beer"       "sum"       
+</code></pre>
+
+<p>The first step is to get a visual idea of what is happening.  Let's use your <code>ggplot2</code> skills.</p>
+
+<p>We can look at the if there is a difference in a number of ways.  Overall we want to know if there is a difference in drinking between male and female.</p>
+
+<p>Look at drinking distributions:</p>
+
+<pre><code class=">">ggplot(metalheaddrinks, aes(gender, sum)) + geom_boxplot()
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-48.png" alt="" /></p>
+
+<p>Visually is there a difference?</p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><p>Find the distribution of each of the drink columns (beer, coffee, and sum) by gender.</p></li>
+<li><p>Do they all say the same thing? Is there a visual difference between the genders? State your hypothesis.</p></li>
+</ol>
+
+
+<hr />
+
+<h2>Basic Statistics <a name="section3"></a></h2>
+
+<p>While visual interpretation of data can help gain many insights into relationships and patterns that may be occurring, in order to infer appropriate conclusions we need to employ statistical tests.  One thing to keep in mind is that R is a powerful tool for performing statististical tests, but it is only as powerful as your ability to use the right tool. This requires an understanding of statistics.  I will not be covering the how to choose the right statistical test for a given data in this tutorial, but more to introduce how to use some of the most basic statistical functions in R.</p>
+
+<p>Let us test if there is a statistical significant difference between drinking habits between male and females using a simple t-test.</p>
+
+<pre><code class=">">t.test(metalheaddrinks$sum ~ metalheaddrinks$gender)
+</code></pre>
+
+<p>The t-test output tells us so important things.</p>
+
+<p><strong>Welch Two Sample t-test</strong></p>
+
+<ol>
+<li><p>data:  metalheaddrinks$sum by metalheaddrinks$gender</p></li>
+<li><p>t = -6.0437, df = 198, p-value = 7.358e-09</p></li>
+<li><p>alternative hypothesis: true difference in means is not equal to 0</p></li>
+<li><p>95 percent confidence interval:  -18.820137  -9.559863</p></li>
+<li><p>mean in group female = 45.69</p></li>
+<li><p>mean in group male = 59.88</p></li>
+</ol>
+
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><p>Is there a significant difference in drinking habits between female and male in the nerd population?</p></li>
+<li><p>Is there a significant difference in number of showers between nerds and metalheads?</p></li>
+<li><p>Is there a significant difference in taco consumption between female nerds and female metalheads?</p></li>
+</ol>
+
+
+<hr />
+
+<h4>Example 2 - ANOVA (Using real scientific data)</h4>
+
+<p>We just did a t-test many times to test significance between many difference categories, which is an inappropriate way to handle the data.  Although t-tests are easy to conduct and understand, if you are doing many t-tests to find the difference between more than one treatment you are increasing your chances of performing a Type 1 error, which is an incorrect rejection of a null hypothesis, or a false positive.  In other words, saying that there is a relationship in the data that simply is not there. Every time you do a t-test there is a 5% chance that you will perform a type 1 error.  So when you do three t-tests, you are essentially increasing your risk for a type 1 error to 15%. When multiple treatments are present, many times you will run ANOVA analysis.</p>
+
+<p><em>data file = hypocotyl.csv</em></p>
+
+<p>About this dataset: We are going to use a more scientific dataset this time. A real dataset courtesy of the <a href="http://malooflab.openwetware.org/Julin_Maloof.html">Maloof Lab</a>. In this data set, multiple <a href="http://en.wikipedia.org/wiki/Mutation">mutant</a> plant lines.  Mutant usually means that a particular gene becomes non-functional causing no protein product.  For instance, the <em>elf3</em> mutant means that this mutant line has a defect in the ELF3 gene and as a result, there is no ELF3 protein.  Lines were grown in two light conditions, <a href="http://www.nature.com/ncb/journal/v13/n4/full/ncb0411-347.html?WT.ec_id=NCB-201104">sun and shade</a>.  The Maloof lab is particularly interested in how a plant responds to shade, so the purpose was to see if there are any mutant lines that react differently to the sun and shade treatments.</p>
+
+<p>In normal conditions, one of the responses plants have to shade is longer hypocotyls (stem region).  This makes sense in that they are trying to reach sun by growing past whatever is shading them.  One way to understand how an organism achieves these types of responses is to find genes that play roles in the process. In order to find genes that may be regulating this process the Maloof lab wanted to see if there are mutant lines that act differently to sun and shade then the normal response to shade (elongated hypocotyls).</p>
+
+<p><strong>Question</strong> Are there differences between hypocotyl length among the lines tested?</p>
+
+<p>Since we are using a new data set, we should first get an idea of what the data set contains and how it is formatted.</p>
+
+<p>First, import the data set into your R environment.</p>
+
+<pre><code class=">">hyps &lt;- read.csv("hypocotyl.csv")
+</code></pre>
+
+<p>Check your data set.</p>
+
+<pre><code class=">">head(hyps)
+</code></pre>
+
+<pre><code>    line hyp.length plate chamber light
+1 elf3.1      2.602    C2       W shade
+2 elf3.1      3.796    C2       W shade
+3 elf3.1      3.772    C2       W shade
+4 elf3.1      2.459    C2       W shade
+5 elf3.1      2.828    C2       W shade
+6 elf3.1      2.756    C2       W shade
+</code></pre>
+
+<p>What are some other ways to check your data set?</p>
+
+<p>The experiment was performed in two different chambers.  Because we don't want to look at the effect of the chamber we will look at the results of the data only from one chamber, the LED chamber.</p>
+
+<pre><code class=">">LED &lt;- subset(hyps, hyps$chamber == "LED")
+</code></pre>
+
+<p>In order to get a feel for the data do some simple visualizations.</p>
+
+<pre><code class=">">hist(LED$hyp.length)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-53.png" alt="" /></p>
+
+<pre><code class=">">plot(LED$line, LED$hyp.length, xlab = "line", ylab = "hypocotyl length (mm)")
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-54.png" alt="" /></p>
+
+<p>What did those graphs tell us about the data?</p>
+
+<h5>ANOVA</h5>
+
+<p>Back to our question: Are the hypocotyl lengths different among the lines?</p>
+
+<p>We now know it is statistically inappropriate to do a t-test on all of the lines. So we will try a more appropriate to tackle this question: an ANOVA.</p>
+
+<p>First we run the test.</p>
+
+<pre><code class=">">anova1 &lt;- aov(hyp.length ~ line, data = LED)
+</code></pre>
+
+<p>Then we need to run the summary to see the results of the ANOVA.</p>
+
+<pre><code class=">">summary(anova1)
+</code></pre>
+
+<p>Are there differences among the lines?</p>
+
+<p>What are the means?</p>
+
+<p>We can get more detail,</p>
+
+<pre><code class=">">print(model.tables(anova1, "means"), digits = 4)
+</code></pre>
+
+<p>So, which means are smaller and which are larger?</p>
+
+<p>Let's look at some graphs with 95% confidence intervals.
+This means that 95% of the time, the "true real-life" mean of a sample will fall in these intervals</p>
+
+<pre><code class=">">ggplot(LED, aes(light, hyp.length)) + geom_boxplot() + facet_grid(. ~ line)
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-58.png" alt="" /></p>
+
+<p>Anything weird about the behavior to the light treatment here?  What can we see from this graph? Do you think that the different lines respond differently to the light treatment?  If they did, this would be a light by line interaction.  We can test for this in an ANOVA.</p>
+
+<pre><code class=">">anova2 &lt;- aov(hyp.length ~ light + line * light, data = LED)
+</code></pre>
+
+<pre><code class=">">lm2 &lt;- lm(hyp.length ~ light + line * light, data = LED)
+</code></pre>
+
+<p>This does exactly the same thing as the anova, but it gives an easier output to read!</p>
+
+<pre><code class=">">anova(anova2)
+</code></pre>
+
+<p>See it is the same.</p>
+
+<pre><code class=">">anova(lm2)
+</code></pre>
+
+<p>You can even look at the interaction of every single line to each other.</p>
+
+<pre><code class=">">summary(lm2)
+</code></pre>
+
+<h5>Example 3 - Correlation with Stereotypes</h5>
+
+<p><em>Data file used: stereotypes.csv</em></p>
+
+<p>One way to see if there is a correlation between two different measurement is to simply visualize on a point plot two observations one on the x-axis and one on the y.</p>
+
+<p>For instance we can ask the question: How are showers and beer consumption related? You can get a graphical view of this by making a scatter plot:</p>
+
+<pre><code class=">">p &lt;- ggplot(stereotypes, aes(shower, beer))
+</code></pre>
+
+<pre><code class=">">p + geom_point()
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-65.png" alt="" /></p>
+
+<p>We then can add a line of regression.  With the <code>`ggplot</code> function <code>stat_smooth()</code></p>
+
+<pre><code class=">">p + stat_smooth(method = "lm") + geom_point()
+</code></pre>
+
+<p><img src="/figure/unnamed-chunk-66.png" alt="" /></p>
+
+<p>What is this plot telling us?</p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<ol>
+<li><p>Make a scatterplot to see if there is any sort of correlation between beer and taco
+consumption. Make sure you add a line of regression.</p></li>
+<li><p>Try two other interactions.  What is your hypothesis?</p></li>
+</ol>
+
+
+<hr />
+
+<p>Again, visual interpretation of a graph is important, but even more important is to run a statistical test.  One way is to run the <code>cor.test()</code> function.</p>
+
+<pre><code class=">">cor.test(stereotypes$shower, stereotypes$beer)
+</code></pre>
+
+<p>The <code>`cor.test()</code> is one way to get do a statistical test on correlation.</p>
+
+<p><strong>Pearson's product-moment correlation</strong>
+1.  t = -6.5421, df = 797, p-value = 1.084e-10
+2.  95 percent confidence interval: -0.2905583 -0.1588803
+3.  Sample estimates: cor -0.2257502</p>
+
+<hr />
+
+<h2>Activity Break</h2>
+
+<p>Using any of the three data sets:</p>
+
+<ol>
+<li>State three new hypothesis that have not been tested.</li>
+<li>Make three visualization that illustrate your hypothesis</li>
+<li>Do three appropriate statistical analysis to illustrate your conclusions.</li>
+</ol>
+
+
+<hr />
+
+<h2>Conclusion</h2>
+
+<p><img src="/img/daredevil7.png" class="img-responsive" align="right"></p>
+
+<p>You are now ready to start fighting the good fight against the ever increasing onslaught of data that is being thrown against humanity. We are in an exciting time in history, never have so many people been given the opportunity to find our own patterns in data to describe the world around us. Our curiosity is only limited by our endurance to keep asking questions. We are in an amazing era where information is all around us, even the information to teach.  Don't forget that there are good programmers and there are bad programmers and this is not defined by how amazing you are at coding, but how you act in the programming community.  Sure, Daredevil often acted alone in fighting evil, but he also used help from others super heroes.  No matter the language you learn or project you are working on, always strive to make your code readable for others and when you get better, give back. Find your other mutant friends and fight.</p>
+
+<h2>Resources <a name="section4"></a></h2>
+
+<p>There are many intricacies to everything I have mentioned above and the best way to
+learn about them more is to google it, seriously. R is an open source program which
+means it was made and maintained for free by a community. This means that there is a
+wealth of free information about every single detail of it, so take advantage of this
+fact always.</p>
+
+<h3>General Programming</h3>
+
+<p><a href="http://norvig.com/21-days.html">Teach Yourself Programming in Ten Years</a> Peter Norvig</p>
+
+<p><a href="http://www.ted.com/playlists/13/open_source_open_world.html">TED talks on Open Source</a></p>
+
+<h3>Data Format and Structure</h3>
+
+<p><a href="http://www.lifehack.org/articles/technology/why-geeks-love-plain-text-and-why-you-should-too.html">Why Geeks Love Plain Text (and You Should Too)</a> CM Smith</p>
+
+<p><a href="https://github.com/hadley/devtools/wiki/Data-structures">Data Structures</a> Hadley Wickham</p>
+
+<p><a href="http://vita.had.co.nz/papers/tidy-data.pdf">Tidy Data</a> Hadley Wickham</p>
+
+<p><a href="http://mfcovington.github.io/r_club/resources/2013/03/27/DataTypes/">Data Types</a> Julin Maloof</p>
+
+<h2>Data Visualization</h2>
+
+<p><a href="http://docs.ggplot2.org/current/">ggplot2 Documentation</a> Hadley Wickham</p>
+
+<p><a href="http://www.interaction-design.org/encyclopedia/data_visualization_for_human_perception.html">Visualization for Human Perception</a> Stephen Few</p>
+
+<p><a href="http://www.vincebuffalo.com/2012/11/14/learn-visualization.html">My First Recommendation to New Scientific Coders: Learn Visualization</a> Vince Buffalo</p>
+
+<h3>R Language Learning and Tutorials</h3>
+
+<p><a href="http://www.rstudio.com/training/">Harness the power of R</a></p>
+
+<p><a href="http://www.cookbook-r.com/">R Cookbook</a> Winston Chang</p>
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'cierareports'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</div>
+
+<div class="col-md-2"></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
