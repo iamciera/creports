@@ -345,6 +345,18 @@ img {
 }
 /*This is where Ciera to add things*/
 
+center {
+  text-align:center
+}
+
+left {
+  text-align:left
+}
+
+right {
+  text-align:right
+}
+
 /*Research Buttons */
 .myButtonLink3 {
     display: block;
