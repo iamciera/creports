@@ -1,7 +1,7 @@
 ---
 layout: blog_entry
 image: /img/pollenTube1.jpg
-title: Pretty Plant Porn
+title: New microscope filters
 ---
 
 I am more interested in vegetative development, but have recently been paying a bit more attention to the part of plants that does not need any more flattery, flowers. I have been really wanting to look closer at how tomato pollination occurs leading me to look at what happens when pollen hits sigma, yes sex.  I have been very excited this week as we have just gotten a few new filters on our dissecting microscope allowing visualization of pollen germination directly on the plant in the most beautiful way. 
@@ -21,7 +21,7 @@ I am excited to analyze the results from all the samples that were collected thi
 
 **[Bedinger Lab Tomato Pollen Staining Protocol](http://www.irbtomato.org/Aniline_Blue_Staining_Protocol.pdf)** *free*  
 
-This the protocol I used.  The only significant difference is I used plain ol' Aniline Blue, not the Fluorochrome Aniline Blue.
+This is the protocol I used.  The only significant difference is I used plain ol' Aniline Blue, not the Fluorochrome Aniline Blue.
 
 [Pollen and Stigma Structure and Function: The Role of Diversity in Pollination](Pollen and Stigma Structure and Function: The Role of Diversity in Pollination) *free*
 
