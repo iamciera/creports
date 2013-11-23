@@ -76,7 +76,7 @@ for (var i = 0, len = inputs.length; i < len; i++) {
         this.src = this.getAttribute('data-orig-image');
     };
 }
-
+  
 /* ========================================================================
  * Bootstrap: alert.js v3.0.0
  * http://twbs.github.com/bootstrap/javascript.html#alerts
