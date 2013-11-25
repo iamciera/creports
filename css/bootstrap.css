@@ -370,6 +370,11 @@ right {
 
 .fixed {
   position:fixed;
+  text-align:left;
+}
+
+.smallText {
+  font-size: 80%
 }
 
 .myButtonLink2 {
