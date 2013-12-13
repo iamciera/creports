@@ -368,6 +368,9 @@ right {
     background-position: 0 0;
 }
 
+/*end of Research Buttons */
+
+
 .fixed {
   position:fixed;
   text-align:left;
@@ -375,6 +378,10 @@ right {
 
 .smallText {
   font-size: 80%
+}
+
+.tinyText {
+  font-size: 60%
 }
 
 .myButtonLink2 {
