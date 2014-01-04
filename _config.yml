@@ -1,7 +1,7 @@
 name: "CReporter"
 description: "She who Reports"
 
-baseurl: “/creports”
+baseurl: /creports
 
 paginate: 10
 markdown: rdiscount
