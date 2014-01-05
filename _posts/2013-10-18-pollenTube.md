@@ -1,7 +1,7 @@
 ---
 layout: blog_entry
-image: /img/pollenTube1.jpg
-title: New DAPI Microscope Filter
+image: {{ site.baseurl }}/img/pollenTube1.jpg
+title: New Microscope Filters
 ---
 
 ##Pollen tubes stained with aniline blue
