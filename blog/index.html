@@ -25,9 +25,9 @@ layout: default
 		
 		  {% for post in site.posts %}
 			
-			 <a href="blog/{{ post.url }}"> 
+			 <a href="{{ site.baseurl }}blog/{{ post.url }}"> 
 		      
-		      <img src="{{ post.image }}" class="img-responsive" alt=""> 
+		      <img src="{{ site.baseurl }}/{{ post.image }}" class="img-responsive" alt=""> 
 		      <h3>{{ post.title }}</h3> 
 		      <br>
 		      
