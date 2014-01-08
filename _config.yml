@@ -1,9 +1,7 @@
 name: "CReporter"
 description: "She who Reports"
-
 baseurl: "/creports"
-
 paginate: 10
 markdown: rdiscount
-permalink: pretty
+permalink: /blog/:year/:month/:day/:title
 pygments: true
