@@ -1,6 +1,6 @@
 ---
 layout: blog_entry
-image: {{ site.baseurl }}/img/pollenTube1.jpg
+image: /img/pollenTube1.jpg
 title: New Microscope Filters
 ---
 
