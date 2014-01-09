@@ -1,6 +1,6 @@
 ---
 layout: blog_entry
-image: /img/pollenTube1.jpg
+image: {{ site.baseurl }}/img/pollenTube1.jpg
 title: New Microscope Filters
 ---
 
@@ -8,7 +8,7 @@ title: New Microscope Filters
 
 I am more interested in vegetative development, but have recently been paying a bit more attention to the part of plants that do not need any more flattery or attention, flowers. Recently one of my projects got me interested in how tomato pollination occurs.  This has lead me to look at what happens when pollen hits sigma, the foreplay on the road to fertilization, yes sex.  I have been very excited this week as we have just gotten a few new filters on our dissecting microscope allowing visualization of pollen germination directly on the plant in the most beautiful way. 
 
-<img src="/img/pollenFig.png" class="img-responsive" alt="Responsive image"> 
+<img src="{{ site.baseurl }}/img/pollenFig.png" class="img-responsive" alt="Responsive image"> 
 
 <!-- <div class="container">
 
@@ -52,33 +52,33 @@ The aniline blue is staining the [callose](http://en.wikipedia.org/wiki/Callose)
   <!-- Wrapper for slides -->
 <div class="carousel-inner">
   <div class="item active">
-    <img src="/img/pollen04.jpg" alt="...">
+    <img src="{{ site.baseurl }}/img/pollen04.jpg" alt="...">
     <div class="carousel-caption">
       <h3>Selfed individual</h3>
       <p>You can see many pollen grains germinated on this stigma, making it hard to discern each pollen tube from the sea of growing pollen tubes. </p>
     </div>
   </div>
      <div class="item">
-        <img src="/img/pollen01.jpg" alt="..">
+        <img src="{{ site.baseurl }}/img/pollen01.jpg" alt="..">
       <div class="carousel-caption">
         <h3>Crossed flower</h3>
         <p>When you don't allow selfing and cross yourself, you can control how much pollen is placed on stigma</p>
       </div>
     </div>
   <div class="item">
-    <img src="/img/pollen05.jpg" alt="...">
+    <img src="{{ site.baseurl }}/img/pollen05.jpg" alt="...">
     <div class="carousel-caption">
       <h3>Close up of pollen grains</h3>
     </div>
   </div>
    <div class="item">
-    <img src="/img/pollen03.jpg" alt="...">
+    <img src="{{ site.baseurl }}/img/pollen03.jpg" alt="...">
     <div class="carousel-caption">
       <h3>Close up of callose plugs</h3>
     </div>
   </div>
   <div class="item">
-    <img src="/img/pollen02.jpg" alt="...">
+    <img src="{{ site.baseurl }}/img/pollen02.jpg" alt="...">
     <div class="carousel-caption">
       <h3>Style veins</h3>
       <p>The vasculature  of the stigma stains a more cyan color and is noticeably thicker than the pollen tubes.</p>
@@ -102,13 +102,13 @@ The aniline blue is staining the [callose](http://en.wikipedia.org/wiki/Callose)
 
 I have been doing some histology of the stem and the [shoot apical meristem](http://en.wikipedia.org/wiki/Meristem#Shoot_apical_meristems) in tomato, and recently could not resist staining a few of the slides with calcoflour since we just got the DAPI filter installed. I still have to get the stain timing and calcofluor dilution optimized, but if there is one thing I learned, it is that this stain gives an extremely strong signal using a very diluted amount.  
 
-<img src="/img/calco01.jpg" class="img-responsive" alt="...">
+<img src="{{ site.baseurl }}/img/calco01.jpg" class="img-responsive" alt="...">
 
-<img src="/img/calco02.jpg" class="img-responsive" alt="...">
+<img src="{{ site.baseurl }}/img/calco02.jpg" class="img-responsive" alt="...">
 
-<img src="/img/calco05.jpg" class="img-responsive" alt="..."> 
+<img src="{{ site.baseurl }}/img/calco05.jpg" class="img-responsive" alt="..."> 
  
-<img src="/img/calco04.jpg" class="img-responsive" alt="..."> 
+<img src="{{ site.baseurl }}/img/calco04.jpg" class="img-responsive" alt="..."> 
 
 ###<b>Filter Set-up</b>
 
