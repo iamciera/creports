@@ -1,6 +1,6 @@
 name: "CReporter"
 description: "She who Reports"
-baseurl: "/creports"
+baseurl: ""
 paginate: 10
 markdown: rdiscount
 permalink: /blog/:year/:month/:day/:title/
