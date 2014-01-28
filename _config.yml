@@ -3,5 +3,5 @@ description: "She who Reports"
 baseurl: ""
 paginate: 10
 markdown: rdiscount
-permalink: /blog/:year/:month/:day/:title/
+permalink: cierareports.org/blog/:year/:month/:day/:title/
 pygments: true
