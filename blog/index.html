@@ -25,13 +25,14 @@ layout: default
 		
 		  {% for post in site.posts %}
 			
-			 <a href="{{ site.baseurl }}/{{ post.url }}index.html"> 
+			 <a href="{{ post.url }}index.html"> 
 		      
-		      <img src="{{ site.baseurl }}/{{ post.image }}" class="img-responsive" alt=""> 
+		      <img src="{{ post.image }}" class="img-responsive" alt=""> 
 		      <h3>{{ post.title }}</h3> 
 		      <br>
 		      
 		    </a>
+
 		  {% endfor %}	
 
 		</ul> 	
