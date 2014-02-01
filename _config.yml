@@ -5,3 +5,7 @@ paginate: 10
 markdown: rdiscount
 permalink: /blog/:year/:month/:day/:title/
 pygments: true
+analytics :
+  provider : google 
+  google : 
+      tracking_id : 'UA-35857333-1'
