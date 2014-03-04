@@ -8,43 +8,62 @@ Here is a small collection of illustrated plant diagrams.  Two events happened t
 
 ##Images
 
-1854 Schact.  via [Friedman and Diggle, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816):
-
+1854 Leaf Development in a Broad Diversity of Eudicotyledonous Flowering Plants.Plate from Schacht.  via [Friedman and Diggle, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816)
 <img src="{{ site.baseurl }}/img/diagrams/Sachact_1854.png" class="img-responsive center-block" alt="...">
 
-1940 Clausen, Keck & Hiesey. via [@rubenrellan](https://twitter.com/rubenrellan) :
+1853 Leaf Development in Diverse Monocotyledonous Flowering Plants. Plate from Trécul via [Friedman and Diggle, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816)
+<img src="{{ site.baseurl }}/img/diagrams/monocotLeafDeveo.png" class="img-responsive center-block" alt="...">
+
+1857 Floral Development.Plate from Payer. via [Friedman and Diggle, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816)
+<img src="{{ site.baseurl }}/img/diagrams/Floral1857.png" class="img-responsive center-block" alt="...">
+
+Floral Organ Development in *Lavatera trimestris* of the Malvaceae (from Duchartre, 1845). via [Friedman and Diggle, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816)
+<img src="{{ site.baseurl }}/img/diagrams/FloralOrgan.png" class="img-responsive center-block" alt="...">
+
+The Plant Archetype by P.J.F. Turpin Appeared in an 1837 Edition of Goethe’s Works on Natural History Published in France (Goethe, 1837) via [Friedman and Diggle, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816)
+<img src="{{ site.baseurl }}/img/diagrams/Turpin.png" class="img-responsive center-block" alt="...">
+
+
+1940 Clausen, Keck & Hiesey. via [@rubenrellan](https://twitter.com/rubenrellan) 
 <img src="{{ site.baseurl }}/img/diagrams/Clausen_etal_1940.jpg" class="img-responsive center-block" alt="...">
 
 1943 Esau Schematic of phyllotaxy & vasculature. via [@DanChitwood](https://twitter.com/DanChitwood)
-
 <img src="{{ site.baseurl }}/img/diagrams/Esau_1943.jpg" class="img-responsive center-block" alt="...">
 
 1869 Gray’s Structural and Systematic Botany. via ‏[@jrossibarra](https://twitter.com/jrossibarra) 
-
 <img src="{{ site.baseurl }}/img/diagrams/Gray_1869.jpg" class="img-responsive center-block" alt="...">
 
-
-
 1950 Stebbins. via ‏[@jrossibarra](https://twitter.com/jrossibarra) 
-
 <img src="{{ site.baseurl }}/img/diagrams/Stebbins_1950.jpg" class="img-responsive center-block" alt="...">
 
 JE Weaver ca. 1915 via [@rubenrellan](https://twitter.com/rubenrellan) 
 <img src="{{ site.baseurl }}/img/diagrams/Weaver_etal_1915.jpg" class="img-
-responsive" alt="...">
+responsive center-block" alt="...">
 
 1930a Müntzing. Watercolor. via M. Stitzer while leading a [Stebbins](http://en.wikipedia.org/wiki/Variation_and_Evolution_in_Plants) discussion (Chapter 7)
 <img src="{{ site.baseurl }}/img/diagrams/Clausen_1930.png" class="img-responsive center-block center-block" alt="..." class="center">
 
 [1983 Gu&eacute;d&eacute;s and Depoy](http://onlinelibrary.wiley.com/doi/10.1111/j.1095-8339.1983.tb00980.x/abstract) 
-
 <img src="{{ site.baseurl }}/img/diagrams/Gudes_Depoy_1983.png" class="img=
 responsive center-block" alt="...">
 
-[1999 Hall&eacute; In Praise of Plants](http://www.amazon.com/In-Praise-Plants-Francis-Halle/dp/1604692626) 
-
-<img src="{{ site.baseurl }}/img/diagrams/halle_1999.png" class="img=
+Tendril Anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
+<img src="{{ site.baseurl }}/img/diagrams/vintagePrintTendrilAnatomy.jpg" class="img=
 responsive center-block" alt="...">
+
+*Solanum* meristem, flower, and fruit diversity.  via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
+<img src="{{ site.baseurl }}/img/diagrams/vintagePrintSolanum.png" class="img=
+responsive center-block" alt="...">
+
+Floral mersitem tissue. via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
+<img src="{{ site.baseurl }}/img/diagrams/vintagePrintMersitemTissue.jpg" class="img=
+responsive center-block" alt="...">
+
+Wood anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
+<img src="{{ site.baseurl }}/img/diagrams/vintagePrintWoodAnatomy.png" class="img=
+responsive center-block" alt="...">
+
+
 
 <a name="section1"></a>
 #Resources 
@@ -65,7 +84,7 @@ responsive center-block" alt="...">
 
 [Harvard University Herbaria Archive Collections](http://www.huh.harvard.edu/libraries/archives.htm)
 
-###Artists
+##Artists
 [J R Shepard](http://inkyleaves.com/#illustration)
 
 [Shevaun](http://botanicalsketches.blogspot.com/)
