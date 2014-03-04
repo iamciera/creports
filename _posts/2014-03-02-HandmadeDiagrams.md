@@ -47,6 +47,10 @@ responsive center-block" alt="...">
 <img src="{{ site.baseurl }}/img/diagrams/Gudes_Depoy_1983.png" class="img=
 responsive center-block" alt="...">
 
+1999 Hall&eacute;. via [In Praise of Plants](http://www.amazon.com/In-Praise-Plants-Francis-Halle/dp/1604692626) 
+<img src="{{ site.baseurl }}/img/diagrams/halle_1999.png" class="img=
+responsive center-block" alt="...">
+
 Tendril Anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
 <img src="{{ site.baseurl }}/img/diagrams/vintagePrintTendrilAnatomy.jpg" class="img=
 responsive center-block" alt="...">
