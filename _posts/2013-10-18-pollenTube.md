@@ -1,7 +1,7 @@
 ---
 layout: blog_entry
 image: /img/pollenTube1.jpg
-title: New Microscope Filters
+title: New microscope filters
 ---
 
 ##Pollen tubes stained with aniline blue

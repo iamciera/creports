@@ -1,7 +1,7 @@
 ---
 layout: blog_entry
 image: /img//diagrams/Clausen_1930.crop.png
-title: Illustrated Plant Diagrams
+title: Illustrated plant diagrams
 ---
 
 Here is a small collection of illustrated plant diagrams.  Two events happened this week that encouraged me to put these images together.  (1) A beautiful thread on Twitter this past week between [@DanChitwood](https://twitter.com/DanChitwood) [@jrossibarra](https://twitter.com/jrossibarra) and [@rubenrellan](https://twitter.com/rubenrellan). (2) [Anna Davidson](https://twitter.com/bioartscientist), bio art extraordinaire, suggesting to a new PhD student to keep track of all their favorite plant diagrams they encounter in graduate school.  Why didn't I do that?  So I thought today, better late then never and started putting together a resource that I can keep adding to that captures my favorite/important botanical illustrations. Somehow I seem to loose track of illustrations and diagrams that have blown my mind over a life time and it is due time to attempt to keep track of them.  I thought this twitter thread would be a good start.  Maybe I can organize them more appropriately as they grow.  I also have been collecting links to sites that have collections of Free Botanical Illustration if you check out the <a href = "#section1"> Resources </a>section below. Let me know if you know of any other diagrams!
