@@ -80,6 +80,8 @@ Wood anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/bota
 
 [Harvard University Herbaria Archive Collections](http://www.huh.harvard.edu/libraries/archives.htm)
 
+[Harvard Museum of Natural History](http://www.hmnh.harvard.edu/on_exhibit/the_glass_flowers.html) via ‏[@jrossibarra](https://twitter.com/jrossibarra) 
+
 ##Artists
 [J R Shepard](http://inkyleaves.com/#illustration)
 
