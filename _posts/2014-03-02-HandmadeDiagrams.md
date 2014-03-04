@@ -52,7 +52,7 @@ Tendril Anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/b
 responsive center-block" alt="...">
 
 *Solanum* meristem, flower, and fruit diversity.  via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
-<img src="{{ site.baseurl }}/img/diagrams/vintagePrintSolanum.png" class="img=
+<img src="{{ site.baseurl }}/img/diagrams/VintagePrintSolanum.png" class="img=
 responsive center-block" alt="...">
 
 Floral mersitem tissue. via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
@@ -62,8 +62,6 @@ responsive center-block" alt="...">
 Wood anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/botanical/) 
 <img src="{{ site.baseurl }}/img/diagrams/vintagePrintWoodAnatomy.png" class="img=
 responsive center-block" alt="...">
-
-
 
 <a name="section1"></a>
 #Resources 
