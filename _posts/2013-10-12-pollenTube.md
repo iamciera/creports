@@ -4,7 +4,7 @@ image: /img/pollenTube1.jpg
 title: New microscope filters
 ---
 
-##Pollen tubes stained with aniline blue
+##  Pollen tubes stained with aniline blue
 
 I am more interested in vegetative development, but have recently been paying a bit more attention to the part of plants that do not need any more flattery or attention, flowers. Recently one of my projects got me interested in how tomato pollination occurs.  This has lead me to look at what happens when pollen hits sigma, the foreplay on the road to fertilization, yes sex.  I have been very excited this week as we have just gotten a few new filters on our dissecting microscope allowing visualization of pollen germination directly on the plant in the most beautiful way. 
 
@@ -30,7 +30,7 @@ I am more interested in vegetative development, but have recently been paying a 
   
 </div><!-- /.container -->
 
-###Pollen
+### Pollen
 
 Pollen grains come from a male part of a flower, the anther.  When the pollen grain comes in contact with the female stigma, the pollen gain starts to elongate creating the [pollen tube](http://en.wikipedia.org/wiki/Pollen_tube), which travels down the long style where it will finally reach the ovary and fertilization occurs. One of the most fascinating aspects of pollen tube development is that the pollen tube is a single cell. The pollen tube does not grow by cellular division, but rather by elongating at one end. Many plant scientists study pollen tubes as a system because 1. the pollen tube length 2. how quickly pollen tubes grow 3. the polar (one side of the cell) nature of the growth.  
 
@@ -96,7 +96,7 @@ The aniline blue is staining the [callose](http://en.wikipedia.org/wiki/Callose)
 </div>
 
 
-##Stem stained with calcoflour
+## Stem stained with calcoflour
 
 [Calcoflour](http://en.wikipedia.org/wiki/Calcofluor-white) is used to visualize the cell walls of plants by staining a huge component of plant cell walls, [cellulose](http://en.wikipedia.org/wiki/Cellulose).
 
@@ -110,7 +110,7 @@ I have been doing some histology of the stem and the [shoot apical meristem](htt
  
 <img src="{{ site.baseurl }}/img/calco04.jpg" class="img-responsive" alt="..."> 
 
-###<b>Filter Set-up</b>
+### <b>Filter Set-up</b>
 
 Excitation Filter: 370/10 nm BrightLine® single-band bandpass filter
 
@@ -120,11 +120,11 @@ Emission Filter: 409 nm blocking edge BrightLine® long-pass filter
 
 [Wavelength Display of all three filters](http://searchlight.semrock.com/?sid=6bee34b1-06cc-4dbe-a7d7-611e1be7392f)
 
-#Thanks!
+# Thanks!
 
 I am excited to analyze the results from all the samples that were collected this summer by my previous undergraduate intern Gillie Ish-Shalom and our lab technician Sharon Zimmerman. Also, special thanks to the [Tomato Genetics Resource Center](http://tgrc.ucdavis.edu/) and Carlos de le Cruz from the Davis Microscope Facility for helping me set-up our microscope.
 
-##Resources
+## Resources
 
 **[Bedinger Lab Tomato Pollen Staining Protocol](http://www.irbtomato.org/Aniline_Blue_Staining_Protocol.pdf)** *free*  
 
