@@ -6,8 +6,7 @@ title: Seven tips for success in graduate school (from the future)
 
 I was recently asked tips for successfully navigating through graduate school.  I thought about what advice I would give if I could go back in time. So I wrote just that - a letter to myself in my first year of graduate school. Hopefully this advice can help others.
 
-</br>
-</br>
+----
 
 >Dear Past Ciera, 
 

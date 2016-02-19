@@ -6,7 +6,7 @@ title: Illustrated plant diagrams
 
 Here is a small collection of illustrated plant diagrams.  Two events happened this week that encouraged me to put these images together.  (1) A beautiful thread on Twitter this past week between [@DanChitwood](https://twitter.com/DanChitwood) [@jrossibarra](https://twitter.com/jrossibarra) and [@rubenrellan](https://twitter.com/rubenrellan). (2) [Anna Davidson](https://twitter.com/bioartscientist), bio art extraordinaire, suggesting to a new PhD student to keep track of all their favorite plant diagrams they encounter in graduate school.  Why didn't I do that?  So I thought today, better late then never and started putting together a resource that I can keep adding to that captures my favorite/important botanical illustrations. Somehow I seem to loose track of illustrations and diagrams that have blown my mind over a life time and it is due time to attempt to keep track of them.  I thought this twitter thread would be a good start.  Maybe I can organize them more appropriately as they grow.  I also have been collecting links to sites that have collections of free botanical illustration if you check out the <a href = "#section1"> Resources </a>section below. Let me know if you know of any other diagrams or resources!
 
-##Images
+## Images
 
 1854 Leaf Development in a Broad Diversity of Eudicotyledonous Flowering Plants.Plate from Schacht.  via [Friedman and Diggle, 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816)
 <img src="{{ site.baseurl }}/img/diagrams/Sachact_1854.png" class="img-responsive center-block" alt="...">
@@ -62,12 +62,12 @@ Wood anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/bota
 <img src="{{ site.baseurl }}/img/diagrams/vintagePrintWoodAnatomy.jpg" class="img=responsive center-block" width = "1000" alt="...">
 
 <a name="section1"></a>
-#Resources 
-##Papers
+# Resources 
+## Papers
 
 [Friedman and Diggle, Charles Darwin and the origins of plant evolutionary developmental biology. 2011](http://www.ncbi.nlm.nih.gov/pubmed/21515816)
 
-##Botanical Illustration Archives
+## Botanical Illustration Archives
 
 [Vintage Printable Botanical Prints](http://vintageprintable.com/wordpress/botanical/)
 
@@ -82,7 +82,7 @@ Wood anatomy. via [Vintage Printable](http://vintageprintable.com/wordpress/bota
 
 [Harvard Museum of Natural History](http://www.hmnh.harvard.edu/on_exhibit/the_glass_flowers.html) via ‏[@jrossibarra](https://twitter.com/jrossibarra) 
 
-##Artists
+## Artists
 [J R Shepard](http://inkyleaves.com/#illustration)
 
 [Shevaun](http://botanicalsketches.blogspot.com/)
