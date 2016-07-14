@@ -6,7 +6,7 @@ title: New microscope filters
 
 ##  Pollen tubes stained with aniline blue
 
-I am more interested in vegetative development, but have recently been paying a bit more attention to the part of plants that do not need any more flattery or attention, flowers. Recently one of my projects got me interested in how tomato pollination occurs.  This has lead me to look at what happens when pollen hits sigma, the foreplay on the road to fertilization, yes sex.  I have been very excited this week as we have just gotten a few new filters on our dissecting microscope allowing visualization of pollen germination directly on the plant in the most beautiful way. 
+Generally I am more interested in vegetative development, but recently I have been paying a bit more attention to the part of plants that do not need any more flattery or attention - flowers. One of my recent projects made me interested in how tomato pollination occurs.  This lead me to look at what happens when pollen hits sigma, the foreplay on the road to fertilization, yes sex.  I have been very excited this week as we just recieved a few new filters on our dissecting microscope allowing visualization of pollen germination directly on the plant in the most beautiful way. 
 
 <img src="{{ site.baseurl }}/img/pollenFig.png" class="img-responsive" alt="Responsive image"> 
 
@@ -32,9 +32,9 @@ I am more interested in vegetative development, but have recently been paying a 
 
 ### Pollen
 
-Pollen grains come from a male part of a flower, the anther.  When the pollen grain comes in contact with the female stigma, the pollen gain starts to elongate creating the [pollen tube](http://en.wikipedia.org/wiki/Pollen_tube), which travels down the long style where it will finally reach the ovary and fertilization occurs. One of the most fascinating aspects of pollen tube development is that the pollen tube is a single cell. The pollen tube does not grow by cellular division, but rather by elongating at one end. Many plant scientists study pollen tubes as a system because 1. the pollen tube length 2. how quickly pollen tubes grow 3. the polar (one side of the cell) nature of the growth.  
+Pollen grains come from the male part of a flower, the anther.  When the pollen grain comes into contact with the female stigma, the pollen gain begins to elongate, creating the [pollen tube](http://en.wikipedia.org/wiki/Pollen_tube). The pollen tube travels down the style where it will finally reach the ovary and this is when fertilization occurs. One of the most fascinating aspects of pollen tube development is that the pollen tube is just a single cell. The pollen tube does not grow by cellular division, but rather elongation. Many plant scientists study pollen tubes as a system because the pollen tube 1. length is so long compared to other plant cells 2. grows at such a rapid pace and 3. the polar (one side of the cell) nature of the growth.  
 
-The aniline blue is staining the [callose](http://en.wikipedia.org/wiki/Callose) in the pollen tubes. Pollen tubes often have callose plugs, which are the spots you see in the diagram. In all flower plants, the pollen tubes form pollen plugs.   They are believed to act by cutting the older parts of the pollen tube from the newly growing tip, possible increasing  growth rate of the pollen tube down to the ovaries, but it is still largely unknown the exact biological function.
+The aniline blue is staining the [callose](http://en.wikipedia.org/wiki/Callose) in the pollen tubes. Pollen tubes often have callose plugs, which are the spots you see in the diagram. In all flower plants, pollen tubes form pollen plugs.   They are believed to act by cutting the older parts of the pollen tube from the newly growing tip, possible increasing  growth rate of the pollen tube down to the ovaries, but it is still largely unknown the exact biological function.
 
 
 
