@@ -4841,12 +4841,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 /*This is the navigation bar on top*/
 
 .navbar-inverse {
-  background-color: #00002E;
-  border-color: #080808;
+  background-color: #E6E6FA;
+  border-color: #E6E6FA;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #BE81F7; /*This is the about section*/
+  color: #383838 ; /*This is the about section*/
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -4860,7 +4860,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #BE81F7; /*This is the color of text */
+  color: #383838 ; /*This is the color of text */
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
