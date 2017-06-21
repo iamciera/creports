@@ -3,7 +3,6 @@ description: "She who Reports"
 baseurl: ""
 paginate: 10
 permalink: /blog/:year/:month/:day/:title/
-pygments: true
 analytics :
   provider : google 
   google : 
